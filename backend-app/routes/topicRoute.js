@@ -9,11 +9,8 @@ router.get('/', async function(req, res, next) {
     async function populateThreads(docs) {
         const resultListInner = []
         for (const item of docs) {
-            console.log(item + " this topic is searching")
             await ThreadObj.find({topic: item.name}).then((docs2) => {
                 if(docs2) {
-                    console.log("FOUND TOPICS - THREADS")
-                    console.log(docs2)
                     let temp = {
                         _id: item._id,
                         topic: item.name,
@@ -21,7 +18,6 @@ router.get('/', async function(req, res, next) {
                     }
                     
                     resultListInner.push(temp)
-                    //res.status(200).json(temp);
                 } else {
                     let temp2 = {
                         _id: item._id,
@@ -35,15 +31,11 @@ router.get('/', async function(req, res, next) {
         return resultListInner;
     }
     
-    console.log("IN GET METHOD - GET ALL TOPICS AND THREADS")
     var resultList = []
     TopicObj.find().then(async (docs) => {
         if(docs) {
-            console.log("TOPICS FOUND");
-            console.log(docs);
             resultList = await populateThreads(docs);
             res.status(200).json(resultList)
-            
         } else {
             throw new Error;
         }
