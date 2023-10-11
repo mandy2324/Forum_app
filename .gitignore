@@ -36,11 +36,11 @@ build/
 
 
 # dependencies
-/express-app/node_modules
-/react-app/node_modules
-/react-app/secrets
-/react-app/src/secrets
-/react-app/public/secrets
+/backend-app/node_modules
+/frontend-app/node_modules
+/frontend-app/secrets
+/frontend-app/src/secrets
+/frontend-app/public/secrets
 
 /.pnp
 .pnp.js
