@@ -10,10 +10,10 @@ import TalkBG from "../../assests/group_talk.jpg";
 
 function Home() {
   return (
-
+  <>
   <div className='splash'>
-       
-    <div className="bg-overlay"style={{backgroundImage: `url(${TalkBG})`}}></div>
+    <img style={{backgroundImage: `url(${TalkBG})`}}></img>
+    <div className="bg-overlay"></div>
 
       <div className="splash-text">
         <p></p>
@@ -27,6 +27,7 @@ function Home() {
         </form>
     </div>
     </div>
+    </>
   )
  }
 export default Home;
