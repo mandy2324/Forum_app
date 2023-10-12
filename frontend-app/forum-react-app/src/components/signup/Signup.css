@@ -1,8 +1,9 @@
-.l-wrapper {
+
+.r-wrapper {
     width: 500px; 
-    height: 330px;
+    width: 500px;
     padding: 2rem 1rem;
-    margin: 100px auto;
+    margin: 50px auto;
     background-color: whitesmoke;
     border-radius: 10px;
     text-align: center;
@@ -14,19 +15,19 @@ h1 {
     font-size: 2rem;
     color: black;
     margin-top: 1.2rem;
+
 }
 
 form input {
     width: 92%;
     outline: none;
     border: 1px solid white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 20px;
     background-color: whitesmoke;
-    
 }
 
-.l-btn {
+.r-btn {
     font-size: 1rem;
     margin-top: 1.8rem;
     padding: 10px 0;
@@ -39,8 +40,8 @@ form input {
     background-color: aquamarine;
 }
 
-.l-btn:hover {
-    background-color:black;
+.r-btn:hover {
+    background-color: black;
 }
 
 input:focus {
@@ -53,3 +54,5 @@ input:focus {
     color: #636363;
     
 }
+
+

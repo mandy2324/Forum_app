@@ -1,31 +1,30 @@
-import React from "react"; 
+import React, {useState} from "react"; 
 import {Routes,Route } from "react-router-dom";
 import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
-
+import Dashboard from "./components/dashboard/Dashboard";
+import Login from "./components/login/Login"; 
+import Signup from "./components/signup/Signup"; 
+import AuthContextProvider from "./service/AuthContextProvider";
 
 
 
 
 function App() {
-
+  const [isLoggedIn] = useState(false); 
   
     return (
-    
+      
         <div className="App">
-
-          
-            <Navbar/>
+          <AuthContextProvider value={( isLoggedIn )}>
+          <Navbar/>
             <Routes>
               <Route path="/" exact element={<Home/>}/>
-              
-              
-              {/* <Route path="/posts" exact element={<Posts/>}/> */}
-              
+              <Route path="/dashboard" exact element={<Dashboard/>}/>
+              <Route path="/login" exact element={<Login/>}/>
+              <Route path="/signup" exact element={<Signup/>}/>              
             </Routes>
-           
-          
-          
+          </AuthContextProvider>
         </div>)
 }
 export default App; 
