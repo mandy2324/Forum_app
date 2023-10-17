@@ -14,6 +14,7 @@
     z-index: 2;
     padding: 0 1rem;
     font-family: 'Courier New', Courier, monospace;
+    background-color: white;
   }
   
   .nav-menu {
@@ -30,5 +31,5 @@
   }
 
   li a:hover {
-    background-color: cyan;
+    background-color: orangered;
   }

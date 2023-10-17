@@ -16,6 +16,7 @@ function Home() {
     <div className="bg-overlay"></div>
 
       <div className="splash-text">
+        <p>SHARE A THOUGHT.RECEIVE A THOUGHT.</p>
         <p></p>
         <form className="form">
             <div>
