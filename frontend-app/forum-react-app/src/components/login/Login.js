@@ -48,14 +48,18 @@ const Login = ({ setIsLoggedIn }) => {
     return (
         <>
         <div>
+        <style>{'body { background-color: black; }'}</style>
+
         <div className='l-wrapper'>
        <h1>Login</h1>
        <form>
-         <input type="text" placeholder='Username'onChange={(e)=> setUsername(e.target.value)}/>
-         <input type="text" placeholder='Password' onChange={(e) => setPassword(e.target.value)}/>
+         <input type= "reset" type="text" placeholder='Username'onChange={(e)=> setUsername(e.target.value)}/>
+         <input type= "reset" type="text" placeholder='Password' onChange={(e) => setPassword(e.target.value)}/>
        </form>
        <button className='l-btn' onClick={(e)=> handleLogin(e)}>Login</button>
-       <Link to="/register">
+       {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
+       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+       <Link to="/signup">
        <div className='member'>Not a member? Register Now</div>
        </Link>
      </div>

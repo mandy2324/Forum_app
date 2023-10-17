@@ -48,19 +48,24 @@ function Signup() {
     }
     
   return (
+    <div>
+    <style>{'body { background-color: black; }'}</style>
+
     <div className='r-wrapper'>
       <h1>Sign Up</h1>
       <form>
-        <input type="text" placeholder='Username' onChange={(e) => setUsername(e.target.value)}/>
+        <input type= "reset" type="text" placeholder='Username' onChange={(e) => setUsername(e.target.value)}/>
         {/* <input type="text" placeholder='Name'/> */}
-        <input type="text" placeholder='Password'onChange={(e) => setPassword(e.target.value)}/>
+        <input type= "reset" type="text" placeholder='Password'onChange={(e) => setPassword(e.target.value)}/>
         {/* <input type="text" placeholder='Re-enter Password'/> */}
       </form>
       <button className='r-btn' onClick={handleSubmit}>Sign Up</button>
+      {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
+      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       <Link to="/login">
         <div className='member'>Already have an account? Login Now</div>
       </Link>
-      
+    </div>
     </div>
   )
 }

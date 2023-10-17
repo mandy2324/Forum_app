@@ -45,14 +45,11 @@ img {
     font-family: 'Courier New', Courier, monospace;
 }
 
-h1 {
-    font-size: 7em;
-}
-
 p {
     justify-self: flex-end;
-    font-size: 2em;
     color: white;
+    font-weight: bolder;
+    text-align: center;
 }
 
 .home-btn {
@@ -101,7 +98,7 @@ p {
 }
 
 .icon {
-    fill: cyan;
+    fill: orangered;
 }
 
 button {

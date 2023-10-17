@@ -3,7 +3,7 @@
     width: 500px; 
     width: 500px;
     padding: 2rem 1rem;
-    margin: 50px auto;
+    margin: 100px auto;
     background-color: whitesmoke;
     border-radius: 10px;
     text-align: center;
@@ -37,7 +37,7 @@ form input {
     width: 90%;
     color: white; 
     cursor: pointer;
-    background-color: aquamarine;
+    background-color: orangered;
 }
 
 .r-btn:hover {
@@ -53,6 +53,10 @@ input:focus {
     margin: 1.4rem;
     color: #636363;
     
+}
+p {
+    padding: 10px;
+    font-size: 14px;
 }
 
 
