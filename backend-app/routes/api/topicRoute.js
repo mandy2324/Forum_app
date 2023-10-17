@@ -16,6 +16,7 @@ router.get('/', async function(req, res, next) {
                         topic: item.name,
                         threads: docs2
                     }
+                    
                     resultListInner.push(temp)
                 } else {
                     let temp2 = {

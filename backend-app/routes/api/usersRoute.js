@@ -21,7 +21,7 @@ router.post('/user', jsonParser, function(req, res) {
 
     newUser.save().then((doc) => {
         res.status(201).json(newUser);
-        console.log(doc); 
+        console.log(doc);
     }).catch((err) => {
         console.log(err);
         res.status(400).json({message: "Cannot create another user with this username"});
