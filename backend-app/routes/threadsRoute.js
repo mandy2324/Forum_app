@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
             throw new Error;
         }
     }).catch((err) => {
-        res.status(400).json({message: "An error occurred fetching threads.", error: err.message})
+        res.status(400).json({message: "An error occurred fetching threads from backend.", error: err.message})
     })
 });
 
