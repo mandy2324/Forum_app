@@ -1,12 +1,12 @@
 const express = require('express');
-const User = require('../models/users');
+const User = require('../../models/users');
 
 const router = express.Router();
 var bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 // Get all users
-router.get('/user', jsonParser, function(req, res) {
+router.get('/', jsonParser, function(req, res) {
     const users = User.find().then((doc) => {
         console.log(doc);
         res.status(200).json(doc);
@@ -14,7 +14,7 @@ router.get('/user', jsonParser, function(req, res) {
 })
 
 // Create new user
-router.post('/user', jsonParser, function(req, res) {
+router.post('/', jsonParser, function(req, res) {
     const user = req.body;
     const newUser = new User(user);
     console.log(req.body);
@@ -44,13 +44,13 @@ router.post('/auth', jsonParser, function(req, res) {
     }).catch((err) => res.status(400).json(err));
 })
 
-router.delete('/user', jsonParser, function(req, res) {
+router.delete('/', jsonParser, function(req, res) {
     User.deleteOne({_id: req.body._id}).then((doc) => {
         res.status(200).json(doc);
     }).catch((err) => res.status(400).json(err))
 })
 
-router.delete('/user/:username', jsonParser, function(req, res) {
+router.delete('/:username', jsonParser, function(req, res) {
     User.deleteOne({username: req.params.username}).then((doc) => {
         res.status(200).json(doc);
     }).catch((err) => res.status(400).json(err))

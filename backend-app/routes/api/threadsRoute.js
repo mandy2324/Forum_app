@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-var ThreadObj = require('../models/threads');
+var ThreadObj = require('../../models/threads');
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 const { setTokenCookie, restoreUser } = require('../../utils/auth');
-const { handleValidationErrors } = require('../../utils/validation');
+const { handleValidationErrors } = require('../../utils/validations');
 
 router.get('/', function(req, res, next) {
     ThreadObj.find().then((docs) => {

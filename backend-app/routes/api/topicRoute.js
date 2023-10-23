@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-var TopicObj = require('../models/topics');
-var ThreadObj = require('../models/threads')
+var TopicObj = require('../../models/topics');
+var ThreadObj = require('../../models/threads')
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 

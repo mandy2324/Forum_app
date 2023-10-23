@@ -8,8 +8,6 @@ const { secret, expiresIn } = jwtConfig;
 const setTokenCookie = (res, user) => {
     // Create the token.
     const safeUser = {
-      id: user.id,
-      email: user.email,
       username: user.username,
     };
     const token = jwt.sign(
