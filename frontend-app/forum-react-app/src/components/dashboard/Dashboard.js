@@ -36,6 +36,8 @@ const Dashboard = () => {
   };
 
   const handleCommentClick = (threadId) => {
+    setShowReplies(!showReplies);
+
     if (user) {
       setIsAddingComment(true);
       setCurrentThreadId(threadId);

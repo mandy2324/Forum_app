@@ -22,6 +22,8 @@ const CommentForm = ({ threadId }) => {
 
       if (response.status === 200) {
        console.log("Comment added:", response.data);
+       setAuthor("");
+       setContent("");
         console.log("thread ID", threadId);
       } else {
         console.error("Error adding comment:", response.data.message);
